@@ -1,10 +1,8 @@
 /* Base Styles */
 :root {
   /* Color System */
-  --color-primary: #3B82F6;
-  --color-primary: black;  /*changed color */
-  --color-primary-dark: #252feb;
-  --color-primary-dark: #DC143C; /*changed color */
+  --color-primary: black;  
+  --color-primary-dark: #DC143C;
   --color-primary-light: #93C5FD;
   --color-primary-light: #16db4a;
 
@@ -16,20 +14,13 @@
   --color-warning: #F59E0B;
   --color-error: #EF4444;
   
-  --color-text-dark: #1F2937;
-   --color-text-dark: rgb(0, 1, 2); /*changed color [overall scem]*/
-  --color-text-medium:#4B5563;
-   --color-text-medium:white; /*changed color (napvar color need be fixed) */
+   --color-text-dark: rgb(0, 1, 2);
+   --color-text-medium:white;
   --color-text-light: #9CA3AF; 
- /*  --color-text-light: white;  /*changed color */
   
-  --color-background: #FFFFFF;
-  --color-background: #0f0000; /*changed color */
-  --color-background-alt: #F9FAFB;
-  --color-background-alt: #0f0000; /*changed color */
-
-  --color-background-dark: #F3F4F6;
-   --color-background-dark:#0f0000;  /*changed color */
+  --color-background: #0f0000; 
+  --color-background-alt: #0f0000;
+   --color-background-dark:#0f0000;
   
   --color-border: #E5E7EB;
   --color-border-dark: #D1D5DB;

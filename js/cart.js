@@ -3,12 +3,6 @@
 // Cart data
 let cart = [];
 
-/*
-// Shipping cost calculation thresholds
-const FREE_SHIPPING_THRESHOLD = 100; // Free shipping for orders over $100
-const BASE_SHIPPING_COST = 9.99;
-*/
- 
 // Add discount codes
 const DISCOUNT_CODES = {
 JN4YD: 0.2  // 20% discount
