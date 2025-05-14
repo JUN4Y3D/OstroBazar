@@ -1,0 +1,221 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  z-index: 900;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+navbar-logo
+.navbar.scrolled {
+  background-color: white;  
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+}
+
+/*changed*/ 
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  background: linear-gradient(45deg, #ff0000, #ff6600); /* red to orange */
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  transition: var(--transition);
+}
+
+.navbar-logo a:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.navbar-nav a {
+  color: black; /*changed*/
+  font-weight: 500;
+  position: relative;
+  padding: var(--space-1) 0;
+}
+
+.navbar-nav a:hover, .navbar-nav a.active {
+  color: var(--color-primary);
+}
+
+.navbar-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  bottom: 0;
+  left: 0;
+  transition: var(--transition);
+}
+
+.navbar-nav a:hover::after, .navbar-nav a.active::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.search-container {
+  position: relative;
+  width: 200px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px 35px 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.search-container input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-medium);
+}
+
+.search-btn:hover {
+  color: var(--color-primary);
+  background: none;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.cart-container {
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px;
+}
+
+.cart-container:hover {
+  color: var(--color-primary);
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-accent);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  transform-origin: center;
+}
+
+.cart-count.bump {
+  animation: bump 0.3s ease-out;
+}
+
+@keyframes bump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-text-dark);
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    z-index: 999;
+    padding: var(--space-6) var(--space-3);
+  }
+  
+  .navbar-menu.active {
+    right: 0;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .navbar-nav a {
+    display: block;
+    padding: var(--space-1);
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .search-container {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-container {
+    display: none;
+  }
+  
+  .navbar-container {
+    padding: var(--space-1) var(--space-2);
+  }
+}

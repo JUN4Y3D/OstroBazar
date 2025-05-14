@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ostro Bazar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/cart.css">
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="navbar-logo">
+            <a href="/">Ostro Bazar</a>
+          </div>
+          <div class="navbar-menu" id="navbar-menu">
+            <ul class="navbar-nav">
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-actions">
+            <div class="search-container">
+              <input type="text" placeholder="Search products...">
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-container" id="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Banner Slider -->
+      <section class="banner-slider">
+        <div class="slides-container" id="banner-slides">
+          <div class="slide active">
+             <img src="/public/B1.jpg" alt="B1"/>
+            <div class="slide-content">
+              <h2>Unleash Your Arsenal</h2>
+              <p>Premium Weapons for Elite Collectors & Tactical Minds</p>
+              <a href="#products" class="btn">Shop Now</a>
+            </div>
+          </div>
+          <div class="slide">
+             <img src="/public/B2.jpg" alt="B2"/>
+            <div class="slide-content">
+              <h2>Gear Like the Pros</h2>
+              <p>Trusted by the elite. Built for performance.</p>
+              <a href="#products" class="btn">Explore</a>
+            </div>
+          </div>
+          <div class="slide">
+           <img src="/public/B3.webp" alt="B3"/>
+            <div class="slide-content">
+              <h2>Your Mission Starts Here</h2>
+              <p>Equip like a warrior. Perform like a legend</p>
+              <a href="#products" class="btn">View Collection</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="prev-slide" id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+          <div class="slide-indicators" id="slide-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+          </div>
+          <button class="next-slide" id="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <!-- Featured Categories -->
+      <section class="featured-categories">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="categories-container">
+          <div class="category-card">
+            <div class="category-icon"><i class="fa-solid fa-gun"></i></div>
+            <h3>Guns</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Missiles</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon"><i class="fa-brands fa-space-awesome"></i></i></div>
+            <h3>Rockets</h3>
+          </div>
+          <div class="category-card">
+            <svg
+              fill="#000000"
+              height="70px"
+              width="100px"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 511 511"
+              xml:space="preserve"
+            >
+              <path
+                d="M503.5,179.999H431v-0.5c0-10.335-6.71-19.127-16-22.266v-9.734c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v9.734
+	c-9.29,3.138-16,11.93-16,22.266v0.5h-72.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5H400v10.234
+	c-9.29,3.138-16,11.93-16,22.266v8.5h-17.909c-3.374-13.759-15.806-24-30.591-24h-160c-14.785,0-27.216,10.241-30.591,24H127v-8.5
+	c0-10.335-6.71-19.127-16-22.266v-10.234h88.5c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H127v-0.5
+	c0-10.335-6.71-19.127-16-22.266v-9.734c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v9.734c-9.29,3.138-16,11.93-16,22.266v0.5
+	H7.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5H96v10.234c-9.29,3.138-16,11.93-16,22.266v16c0,12.958,10.542,23.5,23.5,23.5
+	c10.336,0,19.128-6.71,22.266-16h19.144c3.367,13.729,15.752,23.953,30.494,23.998c-1.653,2.692-2.925,5.666-3.724,8.863
+	l-18.035,72.14H143.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h15.978c0.009,0,0.019,0.002,0.028,0.002
+	c0.007,0,0.013-0.002,0.02-0.002H175.5c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5h-6.394l17.125-68.502
+	c1.84-7.358,8.422-12.498,16.008-12.498h106.522c7.585,0,14.168,5.14,16.008,12.498l17.125,68.502H335.5c-4.142,0-7.5,3.358-7.5,7.5
+	s3.358,7.5,7.5,7.5h15.974c0.007,0,0.013,0.002,0.02,0.002c0.009,0,0.019-0.002,0.028-0.002H367.5c4.142,0,7.5-3.358,7.5-7.5
+	s-3.358-7.5-7.5-7.5h-10.144l-18.035-72.14c-0.799-3.197-2.071-6.17-3.724-8.863c14.742-0.045,27.127-10.269,30.494-23.998h19.144
+	c3.138,9.29,11.93,16,22.266,16c12.958,0,23.5-10.542,23.5-23.5v-16c0-10.335-6.71-19.127-16-22.266v-10.234h88.5
+	c4.142,0,7.5-3.358,7.5-7.5S507.642,179.999,503.5,179.999z M95,179.499c0-4.687,3.813-8.5,8.5-8.5s8.5,3.813,8.5,8.5v0.5H95
+	V179.499z M103.5,251.999c-4.687,0-8.5-3.813-8.5-8.5v-16c0-4.687,3.813-8.5,8.5-8.5s8.5,3.813,8.5,8.5v16
+	C112,248.186,108.187,251.999,103.5,251.999z M335.5,259.999h-160c-9.098,0-16.5-7.402-16.5-16.5s7.402-16.5,16.5-16.5h160
+	c9.098,0,16.5,7.402,16.5,16.5S344.598,259.999,335.5,259.999z M416,243.499c0,4.687-3.813,8.5-8.5,8.5s-8.5-3.813-8.5-8.5v-16
+	c0-4.687,3.813-8.5,8.5-8.5s8.5,3.813,8.5,8.5V243.499z M399,179.499c0-4.687,3.813-8.5,8.5-8.5s8.5,3.813,8.5,8.5v0.5h-17V179.499z
+	"
+              />
+            </svg>
+            <h3>Drones/UAVs</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section class="products-section" id="products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="filter-container">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="Guns">Guns</button>
+          <button class="filter-btn" data-category="Missiles">Missiles</button>
+          <button class="filter-btn" data-category="Rockets">Rockets</button>
+          <button class="filter-btn" data-category="Drones/UAVs">Drones/UAVs</button>
+        </div>
+        <div class="products-grid" id="products-grid">
+          <!-- Products will be loaded from JavaScript -->
+          <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading products...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Offer -->
+      <section class="special-offer">
+        <div class="offer-content">
+          <h2>Special Offer</h2>
+          <p>Get 20% off on selected items with code <strong>JN4YD</strong></p>
+          <a href="#products" class="btn">Shop Now</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="cart-body" id="cart-body">
+        <!-- Cart items will be added here -->
+        <div class="empty-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <p>Your cart is empty</p>
+          <a href="#products" class="btn" id="start-shopping">Start Shopping</a>
+        </div>
+      </div>
+<div class="cart-footer" id="cart-footer">
+        <div class="subtotal-container">
+          <span>Subtotal:</span>
+          <span id="subtotal-amount">BDT: 0.00</span>
+        </div>
+        <div class="shipping-container">
+          <span>Shipping:</span>
+          <span id="shipping-amount">BDT: 0.00</span>
+        </div>
+        <div class="total-container">
+          <span>Total:</span>
+          <span id="total-amount">BDT: 0.00</span>
+        </div>
+        <div class="discount-container">
+          <label for="discount-code">Discount Code:</label>
+          <input type="text" id="discount-code" placeholder="Enter code" />
+          <button id="apply-discount">Apply</button>
+          <div id="discount-message" class="error"></div>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Ostro Bazar</h3>
+          <p>Your one-stop website for all kindda weapons.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 123 OstroBazar, Gulistan</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@OstroBazar.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Ostro Bazar. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
